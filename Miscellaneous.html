@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/list.js"></script>
+    <title>企業專區</title>
+  </head>
+  <body></body><img src="images/header.png" alt=""/>
+  <div class="breadcrumbs">
+    <ul>
+      <li class="first"><a href="#"> </a><span class="divider">/</span></li>
+      <li> Customer Service<span class="divider">/</span></li>
+      <li> <a href="index.html"> Authorized Use Only</a><span class="divider">/</span></li>
+      <li> <a href="#">Miscellaneous   </a></li>
+    </ul>
+  </div>
+  <div class="wrapper" id="composers">
+    <div class="modal"><a class="grid" title="grid" href="Miscellaneous.html"><span class="modal_grid"> </span></a><a class="layout-list" title="list" href="Miscellaneous-list.html"><span class="modal_layout"></span></a><a href="#" title="filter" id="list"><span class="filter"></span>
+        <div id="target_list">
+          <ul> 
+            <li class="selected sort" data-sort="name">Name </li>
+            <li class="sort" data-sort="size">Size</li>
+            <li class="sort" data-sort="type">Types</li>
+          </ul>
+        </div></a></div>
+    <div class="content">   
+      <div class="left_navbar">
+        <div class="main_page"><strong class="left_title"> Main page</strong>
+          <ul class="left_menu">
+            <li><a href="index.html">Authorized Use Only   <em class="fa fa-angle-down" id="icon"></em></a>
+              <ul class="submenu open">
+                <li><a href="gallery.html">Gallery   </a></li>
+                <li><a href="cis.html">CIS </a></li>
+                <li><a href="package.html">Package Details</a></li>
+                <li><a href="2018_pdf.html">2018 Product Presentation</a></li>
+                <li><a class="active" href="Miscellaneous.html">Miscellaneous</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="right_main">
+        <div class="right_title">
+          <h2 class="main_title">Miscellaneous</h2>
+          <p class="main_dec"> Miscellaneous documents to that provided on our open website is sometimes required by our agents.</p>
+        </div>
+        <ul class="right_box list">
+          <li>
+            <div><a href="" target="_blank">
+                <div class="zip_grid"></div></a>
+              <div class="text_title">
+                <p class="short_title">Title :<span class="name">HT32_Setup_IAR_v109.exe</span></p>
+                <p class="desc">Desc. :<span class="type"> Zip</span></p>
+              </div>
+            </div>
+          </li>
+          <li>          
+            <div><a href="" target="_blank">
+                <div class="zip_grid"></div></a>
+              <div class="text_title">
+                <p class="short_title">Title :<span class="name">HT32_STD_5xxxx_FWLib_v008_3322.zip</span></p>
+                <p class="desc">Desc. :<span class="type">Zip</span></p>
+              </div>
+            </div>
+          </li>
+          <li>          
+            <div><a href="" target="_blank">
+                <div class="pdf_grid"></div></a>
+              <div class="text_title">
+                <p class="short_title">Title :<span class="name">ssop24-150.pdf</span></p>
+                <p class="desc">Desc. :<span class="type">28-pin SSOP Packzge</span></p>
+              </div>
+            </div>
+          </li>
+          <li>          
+            <div><a href="" target="_blank">
+                <div class="pdf_grid"></div></a>
+              <div class="text_title">
+                <p class="short_title">Title :<span class="name">HT32F52220_30_UserManualv.pdf</span></p>
+                <p class="desc">Desc. :<span class="type">Pdf</span></p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear-box"></div>
+    <script>
+      var options = { valueNames: ['name', 'size','type'] };
+      
+      var  composersList = new List('composers', options);  
+    </script>
+  </div>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet",href="css/font-awesome.min.css")
+        script(src="js/jquery.min.js")
+        script(src="js/main.js")
+        script(src="js/list.js")
+        title 企業專區
+    body
+    img(src="images/header.png", alt="")
+    
+    div.breadcrumbs
+        ul
+          li.first
+            a(href="#") 
+            span.divider /
+          li  Customer Service
+            span.divider /
+          li  
+           a(href="index.html") Authorized Use Only
+           span.divider / 
+          li
+             
+           a(href="#") Gallery    
+           span.divider / 
+          li
+             
+           a(href="#") gallery001    
+           
+    
+
+    div.wrapper#composers
+     div.modal
+       a(title="grid" class="grid" href="gallery.html")
+         span.modal_grid 
+       a( title="list" class="layout-list" href="list-gallery.html")
+         span.modal_layout
+       a(href="#" title="filter" id="list")
+         span.filter
+         #target_list
+            ul 
+              li.selected.sort(data-sort="name") Name 
+              li.sort(data-sort="size") Size
+              li.sort(data-sort="type") Types
+     div.content    
+       div.left_navbar
+        
+            
+                 
+          div.main_page
+            strong.left_title  Main page
+            ul.left_menu
+             
+              li
+                a.active(href="gallery.html") Gallery001 
+                     
+                    em.fa.fa-level-up
+                ul.submenu.open
+                 li
+                   a(href="#") a001 
+                     
+                  
+                
+                 li
+                    a(href="#") b002
+            
+       div.right_main
+         .right_title
+          h2.main_title Gallery001
+          p.main_dec  Here is located a range of miscellaneous pictures for general use which agents can utilize in their other related promotional material.
+         ul.right_box.list
+           
+          
+            
+              li
+                div
+                 a(href="gallery.html")
+                   div.document_grid
+                 
+                 div.text_title
+                  
+                  p.short_title Title :
+                             
+                     span.name   a001 
+                     
+                  p.desc Desc. :
+                    span.type Folder
+                       
+              li
+                div
+                 a(href="gallery.html")
+                   div.document_grid
+                 
+                 div.text_title
+                  
+                  p.short_title Title :
+                             
+                     span.name  b002
+                     
+                  p.desc Desc. :
+                    span.type Folder
+   
+        
+           
+    div.clear-box
+    script.
+      var options = { valueNames: ['name', 'size','type'] };
+ 
+      var  composersList = new List('composers', options);  
+      

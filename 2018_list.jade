@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet",href="css/font-awesome.min.css")
+        script(src="js/jquery.min.js")
+        script(src="js/main.js")
+        script(src="js/list.js")
+        title 企業專區
+    body
+    img(src="images/header.png", alt="")
+    
+    div.breadcrumbs
+        ul
+          li.first
+            a(href="#") 
+            span.divider /
+          li  Customer Service
+            span.divider /
+          li  
+           a(href="list-index.html") Authorized Use Only  
+           span.divider /
+          li  
+           a(href="#") 2018 Product Presentation 
+    
+   
+        
+    
+    div.wrapper#composers
+     div.modal
+       a(title="grid" class="grid" href="2018_pdf.html")
+         span.modal_grid 
+       a( title="list" class="layout-list" href="#")
+         span.modal_layout
+       a(href="#" title="filter" id="list")
+         span.filter
+         #target_list
+            ul 
+              li.selected.sort(data-sort="name") Name 
+              li.sort(data-sort="size") Size
+              li.sort(data-sort="type") Types
+     div.content    
+       div.left_navbar
+          div.main_page
+            strong.left_title  Main page
+            ul.left_menu
+               li
+                a(href="list-index.html") Authorized Use Only   
+                  em#icon.fa.fa-angle-down
+                ul.submenu.open
+                 li
+                   a(href="list-gallery.html") Gallery   
+                      
+                 li
+                    a(href="cis_list.html") CIS 
+                 li
+                    a(href="list-package.html") Package Details
+                 li
+                    a.active(href="2018_list.html") 2018 Product Presentation
+                 li
+                    a(href="Miscellaneous-list.html") Miscellaneous
+                   
+       div.right_main
+         .right_title
+          h2.main_title 2018 Product Presentation
+          p.main_dec  2018 Product Presentation to that provided on our open website is sometimes required by our agents.
+            table.table.table-striped
+                thead
+                        tr
+                            th  
+                                img(src='images/icon_doc.png', alt='') 
+                                span.sort(data-sort="name") Title 
+                            th  Description
+                            th  
+                                span.sort(data-sort="size") Size
+                tbody.list
+                        tr
+                            td.name
+                              div.list_fifle 
+                                a(href='#')
+                                 p.title_first 2018NPP-AGENDA(EN).pdf
+                            td
+                                p Pdf
+                            td.size
+                                p 3.35 MB  
+                        tr
+                            td.name
+                              div.list_fifle  
+                                a(href='#')
+                                 p.title_first A.32-bit MCU(EN).pdf
+                            td
+                                p Pdf
+                            td.size
+                                p 9.19 MB 
+                        tr
+                            td.name
+                              div.list_fifle  
+                                a(href='#')
+                                 p.title_first B.Wireless(EN).pdf
+                            td
+                                p Pdf
+                            td.size
+                                p 11.0 MB  
+                        tr
+                            td.name
+                              div.list_fifle  
+                                a(href='#')
+                                 p.title_first C.Motor Control(EN).pdf
+                            td
+                                p Pdf
+                            td.size
+                                p 5.01 MB)
+                        tr
+                            td.name
+                              div.list_fifle  
+                                a(href='#')
+                                 p.title_first D.Security&Safety(EN).pdf
+                            td
+                                p Pdf
+                            td.size
+                                p 4.20 MB
+                        tr
+                            td.name
+                              div.list_fifle  
+                                a(href='#')
+                                 p.title_first E.Home Appliances(EN).pdf
+                            td
+                                p Pdf
+                            td.size
+                                p 3.82 MB
+                        tr
+                            td.name
+                              div.list_fifle  
+                                a(href='#')
+                                 p.title_first F.Touch Products(EN).pdf	
+
+                            td
+                                p Pdf
+                            td.size
+                                p 7.25 MB
+                        tr
+                            td.name
+                              div.list_fifle  
+                                a(href='#')
+                                 p.title_first G.Health&Measurement(EN).pdf
+
+                            td
+                                p Pdf
+                            td.size
+                                p  14.3 MB  
+                        tr
+                            td.name
+                              div.list_fifle  
+                                a(href='#')
+                                 p.title_first H.Power Management(EN).pdf	
+
+                            td
+                                p Pdf
+                            td.size
+                                p 11.2 MB  
+                        tr
+                            td.name
+                              div.list_fifle   
+                                a(href='#')
+                                 p.title_first I.Display&Audio(EN).pdf
+
+                            td
+                                p Pdf
+                            td.size
+                                p 12.0 MB    
+    div.clear-box
+    script.
+      var options = { valueNames: ['name', 'size','type'] };
+ 
+      var  composersList = new List('composers', options);  

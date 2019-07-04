@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet",href="css/font-awesome.min.css")
+        script(src="js/jquery.min.js")
+        script(src="js/main.js")
+        script(src="js/list.js")
+        title 企業專區
+    body
+    img(src="images/header.png", alt="")
+    
+    div.breadcrumbs
+        ul
+          li.first
+            a(href="#") 
+            span.divider /
+          li  Customer Service
+            span.divider /
+          li  
+           a(href="index.html")  Authorized Use Only
+           span.divider /
+          li  
+           a(href="#") 2018 Product Presentation  
+
+    
+   
+        
+    
+    div.wrapper#composers
+     div.modal
+       a(title="grid" class="grid" href="#")
+         span.modal_grid 
+       a( title="list" class="layout-list" href="2018_list.html")
+         span.modal_layout
+       a(href="#" title="filter" id="list")
+         span.filter
+         #target_list
+            ul 
+              li.selected.sort(data-sort="name") Name 
+              li.sort(data-sort="size") Size
+              li.sort(data-sort="type") Types
+     div.content    
+       div.left_navbar
+          div.main_page
+            strong.left_title  Main page
+            ul.left_menu
+              li
+                a(href="index.html") Authorized Use Only   
+                  em#icon.fa.fa-angle-down
+                ul.submenu.open
+                 li
+                   a(href="gallery.html") Gallery   
+                      
+                 li
+                    a(href="cis.html") CIS 
+                 li
+                    a(href="package.html") Package Details
+                 li
+                    a.active(href="2018_pdf.html") 2018 Product Presentation
+                 li
+                    a(href="Miscellaneous.html") Miscellaneous
+                   
+       div.right_main
+         .right_title
+          h2.main_title 2018 Product Presentation
+          p.main_dec  2018 Product Presentation to that provided on our open website is sometimes required by our agents.
+         ul.right_box.list
+           -var array= ['2018NPP-AGENDA(EN)','A.32-bit MCU(EN).pdf','B.Wireless(EN).pdf','C.Motor Control(EN).pdf','D.Security&Safety(EN).pdf' ,'E.Home Appliances(EN).pdf','F.Touch Products(EN).pdf','G.Health&Measurement(EN).pdf','H.Power Management(EN).pdf','I.Display&Audio(EN).pdf']
+           -for (var x=0;x<array.length;x++) 
+            li
+              div
+                 a(href="#")
+                     div.pdf_grid
+                 
+                 div.text_title
+                  
+                  p.short_title Title :
+                             
+                     span.name #{array[x]}
+                     
+                  p.desc Desc. :
+                     span.type pdf
+  
+        
+           
+     div.clear-box
+     script.
+      var options = { valueNames: ['name', 'size','type'] };
+ 
+      var  composersList = new List('composers', options);  
+      

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="css/style.css")
+        link(rel="stylesheet",href="css/font-awesome.min.css")
+        script(src="js/jquery.min.js")
+        script(src="js/main.js")
+        script(src="js/list.js")
+        title 企業專區
+    body
+    img(src="images/header.png", alt="")
+    
+    div.breadcrumbs
+        ul
+          li.first
+            a(href="#") 
+            span.divider /
+          li  Customer Service
+            span.divider /
+          li  
+           a(href="list-index.html") Authorized Use Only
+           span.divider /
+          li  
+           a(href="#") Package Details
+
+    
+
+    div.wrapper#composers
+     div.modal
+       a(href="package.html" title="grid")
+         span.modal_grid 
+       a(href="list-package.html" title="list")
+         span.modal_layout
+       a(href="#" title="filter" id="list")
+         span.filter
+         #target_list
+            ul 
+              li.selected.sort(data-sort="name") Name 
+              li.sort(data-sort="size") Size
+              li.sort(data-sort="type")  Types
+     div.content    
+       div.left_navbar
+          div.main_page
+            strong.left_title Main page
+            ul.left_menu
+               li
+                a(href="list-index.html") Authorized Use Only   
+                 em#icon.fa.fa-angle-down
+                ul.submenu.open
+                 li
+                   a(href="list-gallery.html") Gallery   
+                      
+                 li
+                    a(href="cis_list.html") CIS 
+                 li
+                    a.active(href="list-package.html") Package Details
+                 li
+                    a(href="2018_list.html") 2018 Product Presentation
+                 li
+                    a(href="Miscellaneous-list.html") Miscellaneous
+       div.right_main
+         .right_title
+          h2.main_title Package Details
+          p.main_dec  As graphical illustrations of various IC packages may sometimes be required for other promotional material these are provided here as a basis for agents use. 
+             table.table.table-striped
+                thead
+                        tr
+                         
+                            th  
+                                img(src='images/icon_doc.png', alt='') 
+                                span.sort(data-sort="name") Title 
+                            th  Description
+                            th 
+                                span.sort(data-sort="size") Size
+                tbody.list
+                        tr
+                            td.name
+                              div.list_img
+                                
+                                a(href='#')
+                                  p.title_first 16DIP
+                            td
+                                p image
+                            td.size
+                                p 943KB
+                        tr
+                            
+                            td.name
+                              div.list_img  
+                                 a(href='#')
+                                  p.title_first  16SSOP
+                            td
+                                p image
+                            td.size
+                                p 229KB  
+                        tr
+                        
+                            td.name
+                              div.list_img  
+                                 a(href='#')
+                                   p.title_first  18DIP
+                            td
+                                p image
+                            td.size
+                                p 552KB
+                        tr
+                        
+                            td.name
+                              div.list_img  
+                                 a(href='#')
+                                   p.title_first  18SOP
+                            td
+                                p image
+                            td.size
+                                p 684KB
+                        tr
+                        
+                            td.name
+                              div.list_img  
+                                 a(href='#')
+                                   p.title_first  20SOP
+                            td
+                                p image
+                            td.size
+                                p 700KB  
+
+     div.clear-box
+     script.
+       var options = { valueNames: ['name', 'size','type'] };
+ 
+       var  composersList = new List('composers', options);  
